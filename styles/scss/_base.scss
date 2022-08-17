@@ -1,0 +1,110 @@
+@import url("https://fonts.cdnfonts.com/css/gotham-rounded");
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gotham Rounded", sans-serif;
+}
+
+body {
+    @include bg($primary-bg);
+    .wrapper {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+
+// search input
+header {
+    @include bg($primary-bg);
+    @include flex(row, nowrap, center, center);
+    width: 100%;
+    padding: 3rem 1rem 3rem;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    @media (min-width: 500px) {
+        padding: 3rem 2rem 3rem;
+    }
+}
+.input-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 425px;
+    img {
+        position: absolute;
+        top: 48%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+    }
+    input {
+        padding: .75rem 1rem;
+        border-radius: 25px;
+        border: none;
+        width: 100%;
+        outline: none;
+        padding-left: 3rem;
+        font-size: 1.125rem;
+        color: darken(#ccc, 15%);;
+    }
+}
+
+
+// author container
+.author-container {
+    // @include flex(row, wrap, space-around, flex-start);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 10rem;
+    @media (min-width: 500px) {
+        padding: 2rem;
+    }
+    .author-card {
+        @include bg($card-bg);
+        border-radius: 1rem;
+        overflow: hidden;
+        flex: 1 0 300px;
+        cursor: pointer;
+        transition: transform .4s ease-out;
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 4px rgba(black, 0.25);
+            .card-header img {
+                transform: translateY(5px) scale(1.1);
+                filter: drop-shadow(0 4px 4px rgba(black, 0.15));
+            }
+        }
+        .card-header {
+            @include bg($card-header-bg);
+            @include flex(row, nowrap, center, center);
+            height: 175px;
+            img {
+                filter: drop-shadow(0 4px 4px rgba(black, 0.0));
+                transition: transform .4s ease-out, filter .1s ease-in;
+                max-width: 85px;
+            }
+        }
+        .card-content {
+            padding: 1rem;
+            h1.title {
+                font-size: 1.2rem;
+                color: $primary-title;
+            }
+            p {
+                @include text-overflow(10);
+                font-size: .9rem;
+                color: $primary-copy;
+                @media (min-width: 500px) {
+                    @include text-overflow(3);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin bg($color) {
+    @content;
+    background-color: $color;
+}
+
+@mixin flex($dir, $wrap, $just, $align) {
+    @content;
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin responsive($min, $max, $gap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+    gap: $gap;
+  }
+
+@mixin text-overflow($lines) {
+    @content;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+ }

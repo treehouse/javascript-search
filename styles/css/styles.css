@@ -1,0 +1,129 @@
+@import url("https://fonts.cdnfonts.com/css/gotham-rounded");
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham Rounded", sans-serif;
+}
+
+body {
+  background-color: #3C97CB;
+}
+body .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #3C97CB;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 1rem 3rem;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  header {
+    padding: 3rem 2rem 3rem;
+  }
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 425px;
+}
+.input-container img {
+  position: absolute;
+  top: 48%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+}
+.input-container input {
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: 3rem;
+  font-size: 1.125rem;
+  color: #a6a6a6;
+}
+
+.author-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+@media (min-width: 500px) {
+  .author-container {
+    padding: 2rem;
+  }
+}
+.author-container .author-card {
+  background-color: #F5F5F5;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex: 1 0 300px;
+  cursor: pointer;
+  transition: transform 0.4s ease-out;
+}
+.author-container .author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.author-container .author-card:hover .card-header img {
+  transform: translateY(5px) scale(1.1);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.15));
+}
+.author-container .author-card .card-header {
+  background-color: #E3E6E8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 175px;
+}
+.author-container .author-card .card-header img {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0));
+  transition: transform 0.4s ease-out, filter 0.1s ease-in;
+  max-width: 85px;
+}
+.author-container .author-card .card-content {
+  padding: 1rem;
+}
+.author-container .author-card .card-content h1.title {
+  font-size: 1.2rem;
+  color: #262C38;
+}
+.author-container .author-card .card-content p {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+  font-size: 0.9rem;
+  color: #323846;
+}
+@media (min-width: 500px) {
+  .author-container .author-card .card-content p {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
