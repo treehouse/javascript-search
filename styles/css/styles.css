@@ -26,6 +26,7 @@ header {
   position: fixed;
   top: 0;
   margin: 0 auto;
+  z-index: 10000;
 }
 @media (min-width: 500px) {
   header {
@@ -76,6 +77,7 @@ header {
   overflow: hidden;
   flex: 1 0 300px;
   cursor: pointer;
+  opacity: 0;
   transition: transform 0.4s ease-out;
 }
 .author-container .author-card:hover {
@@ -123,6 +125,17 @@ header {
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
