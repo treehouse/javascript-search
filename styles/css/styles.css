@@ -77,7 +77,6 @@ header {
   overflow: hidden;
   flex: 1 0 300px;
   cursor: pointer;
-  opacity: 0;
   transition: transform 0.4s ease-out;
 }
 .author-container .author-card:hover {
